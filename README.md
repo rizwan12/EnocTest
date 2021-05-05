@@ -1,6 +1,6 @@
 # EnocTest
 
-Libraries used:
+# Libraries used:
 - Android X Card View
 - Retrofit
 - Glide
@@ -9,15 +9,19 @@ Libraries used:
 - LiveData for LifeCycle management
 
 
-Architecture used:
+# Architecture used:
 - Model View ViewModel (MVVM) with Live Data and Coroutines.
 
-Architectural Layers:
+# Architectural Layers:
 - Views layer
 - View Models laher
 - Models layer
 - Repository layer
 - Network layer
+
+*********************************************************
+*********************************************************
+*********************************************************
 
 - Q) How did you ensure that the display of the avatar image (from a remote URL) gave the best user experience?
 - A) We are using Glide library for downloading image from the URL which has a safe fallback if image is not loaded. It is thread safe so if due to slow internet if iageis loaded slowly and user navigates from that screen then it handles the fallback with the activity lifecycle. It also caches the image once loaded so everytime its not calling the remote URL.
@@ -40,10 +44,13 @@ On Profile Screen:
 
 I was not able to comlete the testing with Unit tests (at least for the business layer).
 
+*********************************************************
+*********************************************************
+*********************************************************
 
-TASKS DONE:
+# TASKS DONE:
 
-Required:
+REQUIRED:
 1. Build a simple Android app that uses standard native interface controls to provide the login and account profile views.
 - DONE
 
