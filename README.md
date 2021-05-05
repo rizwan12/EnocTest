@@ -19,18 +19,18 @@ Architectural Layers:
 - Repository layer
 - Network layer
 
-Q) How did you ensure that the display of the avatar image (from a remote URL) gave the best user experience?
-A) We are using Glide library for downloading image from the URL which has a safe fallback if image is not loaded. It is thread safe so if due to slow internet if iageis loaded slowly and user navigates from that screen then it handles the fallback with the activity lifecycle. It also caches the image once loaded so everytime its not calling the remote URL.
+- Q) How did you ensure that the display of the avatar image (from a remote URL) gave the best user experience?
+- A) We are using Glide library for downloading image from the URL which has a safe fallback if image is not loaded. It is thread safe so if due to slow internet if iageis loaded slowly and user navigates from that screen then it handles the fallback with the activity lifecycle. It also caches the image once loaded so everytime its not calling the remote URL.
 
-Q) How did you set up the app so that it was automatically logged in for the user on subsequent uses?
-A) We are storing the app token which was received from the login API and whenever user comes back we are checking if we have the token then navigate forward to Profile screen.
+- Q) How did you set up the app so that it was automatically logged in for the user on subsequent uses?
+- A) We are storing the app token which was received from the login API and whenever user comes back we are checking if we have the token then navigate forward to Profile screen.
 There is one more thing, on the profile screen we are calling API to fetch user information, if server returns Unauthenticated error then we logout user and return back to the login screen (Not implemented)
 
-Q) How did you cope with building the sample app without having access to the real back-end API?
-A) I tried using Githib pages for hardcoded responses but got some issue, and due to time limitation then I fallback to use Charles Proxy debugger in which I mapped my API calls to the local files with responses (which I have also attached within the repository) to continue with the flow and test everything.
+- Q) How did you cope with building the sample app without having access to the real back-end API?
+- A) I tried using Githib pages for hardcoded responses but got some issue, and due to time limitation then I fallback to use Charles Proxy debugger in which I mapped my API calls to the local files with responses (which I have also attached within the repository) to continue with the flow and test everything.
 
-Q) What testing did you do, and why?
-A) On Login screen:
+- Q) What testing did you do, and why?
+- A) On Login screen:
     * Email and password fields should not be empty
     * Backend should respond with valid data otherwise display error on the login screen
 
